@@ -1,5 +1,7 @@
 import mlflow
 import argparse
+import os
+os.system('nvidia-smi')
 
 parser = argparse.ArgumentParser(description="Training Script")
 parser.add_argument('--path', type=str, default=None)
