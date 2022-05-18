@@ -1,0 +1,10 @@
+name: vehicle-detection
+
+docker_env:
+  image: training-container-autotrain:latest
+
+entry_points:
+  main: 
+    parameters:
+      path: {type: string, default:"./"}
+    command: "python train.py --path {path}"
