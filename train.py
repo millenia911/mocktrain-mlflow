@@ -5,6 +5,7 @@ from random import sample
 from shutil import copyfile
 
 os.system('nvidia-smi')
+os.system('chmod +x ./blob-data-extractor.sh')
 os.system('./blob-data-extractor.sh')
 os.system('ls .')
 os.makedirs('images', exist_ok=True)
