@@ -13,7 +13,7 @@ images = os.listdir('./new_dataset/dataset_val')
 images = sample(images, 10)
 
 path = './new_dataset/dataset_val'
-new_path = '.images'
+new_path = './images'
 for im in images:
     src = os.path.join(path, im)
     dst = os.path.join(new_path, im)
