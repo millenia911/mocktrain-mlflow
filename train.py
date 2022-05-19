@@ -4,6 +4,8 @@ import os
 from random import sample
 from shutil import copyfile
 
+os.system('pip install azure-storage-blob')
+os.system('pip install azure-identity')
 os.system('nvidia-smi')
 os.system('chmod +x ./blob-data-extractor.sh')
 os.system('./blob-data-extractor.sh')
