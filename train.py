@@ -6,11 +6,11 @@ from shutil import copyfile
 
 os.system('pip install azure-storage-blob')
 os.system('pip install azure-identity')
-os.system('nvidia-smi')
 os.system('chmod +x ./blob-data-extractor.sh')
 os.system('./blob-data-extractor.sh')
-os.system('ls .')
 os.makedirs('images', exist_ok=True)
+os.system('nvidia-smi')
+os.system('ls .')
 images = os.listdir('./new_dataset/dataset_val')
 images = sample(images, 10)
 
