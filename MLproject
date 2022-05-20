@@ -1,7 +1,7 @@
 name: vehicle-detection
 
 docker_env:
-  image: training-container-autotrain:latest
+  image: millenia911/training-container:pytorch-detectron2
 
 entry_points:
   main: 
