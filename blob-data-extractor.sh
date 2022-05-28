@@ -6,15 +6,13 @@ mkdir version
 mkdir version/1
 # download pretrained model
 wget \
-https://modelrepo-autotraining-poc-ndflx.s3.amazonaws.com/models/modelv1/model-metadata.json \
--O version/1/model-metadata.json
+$MODEL_METADATA_URI -O version/1/model-metadata.json
 
-wget https://modelrepo-autotraining-poc-ndflx.s3.amazonaws.com/models/modelv1/output-model.zip
+wget $MODEL_URI
 unzip -q output-model.zip -d version/1
 rm output-model.zip
 
 # dataset prep
-wget https://modelrepo-autotraining-poc-ndflx.s3.amazonaws.com/datasets/vh-det-v01.zip
-
+wget $DATASET_URI
 unzip -q vh-det-v01.zip -d new_dataset
 rm vh-det-v01.zip 
